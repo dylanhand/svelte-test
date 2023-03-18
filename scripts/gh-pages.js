@@ -1,5 +1,6 @@
 const ghpages = await import('gh-pages');
 
+console.log("Deploying to GitHub Pages...");
 
 ghpages.publish(
     'build',
