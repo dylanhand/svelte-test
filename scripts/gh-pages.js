@@ -1,8 +1,5 @@
 const ghpages = await import('gh-pages');
-const dotenv = await import('dotenv');
 const fs = await import('fs');
-
-dotenv.config();
 
 fs.writeFileSync('./build/.nojekyll', '', function (err, file) {
     if (err) console.log(err);
@@ -14,7 +11,6 @@ ghpages.publish(
     {
         branch: 'gh-pages',
         silent: true,
-        // repo: 'https://' + process.env.GITHUB_TOKEN + '@github.com/dylanhand/svelte-test.git',
         dotfiles: true,
         user: {
             name: 'Dylan Hand',
